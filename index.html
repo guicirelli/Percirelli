@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Percirelli</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>@Percirelli</h1>
+    <nav>
+      <button onclick="mostrarSecao('home')">Home</button>
+      <button onclick="mostrarSecao('sobre')">Sobre</button>
+      <button onclick="mostrarSecao('cadastro')">Cadastro</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Seção Home -->
+    <section id="home" class="secao">
+      <h2>Bem-vindo à loja!</h2>
+      <p>Camisas lisas:</p>
+      <div class="produtos">
+        <div class="produto">
+          <img src="images/Camisa Beje.webp" alt="Camisa 1">
+          <p>Camisa Básica Beje Lisa - R$ 49,90</p>
+        </div>
+        <div class="produto">
+          <img src="images/Camisa Marrom.jpg" alt="Camisa 2">
+          <p>Camisa Preta Marrom Lisa - R$ 49,90</p>
+        </div>
+        <div class="produto">
+            <img src="images/Camisa Azul.webp" alt="Camisa 1">
+            <p>Camisa Básica Azul Lisa - R$ 49,90</p>
+          </div>
+          <div class="produto">
+            <img src="images/Camisa Preta.png " alt="Camisa 1">
+            <p>Camisa Básica Preta Lisa - R$ 49,90</p>
+          </div>
+          <div class="produto">
+            <img src="images/Camisa Branca.webp " alt="Camisa 1">
+            <p>Camisa Básica Branca Lisa - R$ 49,90</p>
+          </div>
+      </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="secao hidden">
+      <h2>Sobre Nós</h2>
+      <p>Percirelli é uma marca streetwear feita para quem vive a cidade com atitude e estilo. Roupas que unem conforto, design moderno e autenticidade, perfeitas para o dia a dia urbano. Cada peça é criada para quem quer se destacar com atitude, sem abrir mão da qualidade. Vista Percirelli e faça parte da cultura street.
+      </p>
+    </section>
+
+    <!-- Seção Cadastro -->
+    <section id="cadastro" class="secao hidden">
+      <h2>Cadastro</h2>
+      <form action="#" method="post">
+        <input type="text" name="nome" placeholder="Nome Completo" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <input type="telefone" name="senha" placeholder="Telefone" required>
+        <input type="cep" name="senha" placeholder="Endereço" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Loja de Camisas</p>
+  </footer>
+
+  <script>
+    function mostrarSecao(secaoId) {
+      const secoes = document.querySelectorAll('.secao');
+      secoes.forEach(secao => {
+        if (secao.id === secaoId) {
+          secao.classList.remove('hidden');
+        } else {
+          secao.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
