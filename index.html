@@ -1,85 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Percirelli</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
+  <title>Percirelli</title>
 </head>
 <body>
-  <header>
-    <h1>@Percirelli</h1>
-    <nav>
-      <button onclick="mostrarSecao('home')">Home</button>
-      <button onclick="mostrarSecao('sobre')">Sobre</button>
-      <button onclick="mostrarSecao('cadastro')">Cadastro</button>
-    </nav>
-  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" id="home-link">Home</a></li>
+      <li><button id="btn-lisas">Camisetas Lisas</button></li>
+      <li><button id="btn-estampadas">Camisetas Estampadas</button></li>
+      <li><a href="#contato" id="contato-link">Contato</a></li>
+      <li><button id="btn-ver-carrinho">Carrinho 🛒</button></li>
+    </ul>
+  </nav>
 
   <main>
-    <!-- Seção Home -->
-    <section id="home" class="secao">
-      <h2>Bem-vindo à loja!</h2>
-      <p>Camisas lisas:</p>
-      <div class="produtos">
-        <div class="produto">
-          <img src="images/Camisa Beje.webp" alt="Camisa 1">
-          <p>Camisa Básica Beje Lisa - R$ 49,90</p>
-        </div>
-        <div class="produto">
-          <img src="images/Camisa Marrom.jpg" alt="Camisa 2">
-          <p>Camisa Preta Marrom Lisa - R$ 49,90</p>
-        </div>
-        <div class="produto">
-            <img src="images/Camisa Azul.webp" alt="Camisa 1">
-            <p>Camisa Básica Azul Lisa - R$ 49,90</p>
-          </div>
-          <div class="produto">
-            <img src="images/Camisa Preta.png " alt="Camisa 1">
-            <p>Camisa Básica Preta Lisa - R$ 49,90</p>
-          </div>
-          <div class="produto">
-            <img src="images/Camisa Branca.webp " alt="Camisa 1">
-            <p>Camisa Básica Branca Lisa - R$ 49,90</p>
-          </div>
-      </div>
+
+    <section id="conteudo-principal">
+      <h1>Bem-vindo à Percirelli</h1>
+      <p>A Percirelli nasceu do sonho de vestir pessoas com estilo e conforto, unindo design moderno com qualidade premium. Nossa missão é oferecer camisetas que expressem autenticidade e atitude para todos os momentos.</p>
+      <p>Use o menu para escolher a categoria de camisetas.</p>
     </section>
 
-    <!-- Seção Sobre -->
-    <section id="sobre" class="secao hidden">
-      <h2>Sobre Nós</h2>
-      <p>Percirelli é uma marca streetwear feita para quem vive a cidade com atitude e estilo. Roupas que unem conforto, design moderno e autenticidade, perfeitas para o dia a dia urbano. Cada peça é criada para quem quer se destacar com atitude, sem abrir mão da qualidade. Vista Percirelli e faça parte da cultura street.
-      </p>
-    </section>
+    <section id="produtos-container"></section>
 
-    <!-- Seção Cadastro -->
-    <section id="cadastro" class="secao hidden">
-      <h2>Cadastro</h2>
-      <form action="#" method="post">
-        <input type="text" name="nome" placeholder="Nome Completo" required>
-        <input type="email" name="email" placeholder="E-mail" required>
-        <input type="telefone" name="senha" placeholder="Telefone" required>
-        <input type="cep" name="senha" placeholder="Endereço" required>
-        <input type="password" name="senha" placeholder="Senha" required>
-        <button type="submit">Cadastrar</button>
-      </form>
-    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Loja de Camisas</p>
+  <!-- Carrinho -->
+  <aside id="carrinho">
+    <h2>Seu Carrinho</h2>
+    <div id="itens-carrinho"></div>
+    <div id="total"></div>
+    <button id="btn-fechar-carrinho">Fechar Carrinho</button>
+  </aside>
+
+  <!-- Rodapé -->
+  <footer id="contato">
+    <p>Contato:</p>
+    <p>WhatsApp: <a href="https://wa.me/5591999999999" target="_blank">+55 91 99999-9999</a> | E-mail: <a href="mailto:contato@percirelli.com.br">contato@percirelli.com.br</a></p>
+    <p>Redes Sociais:
+      <a href="https://instagram.com/percirelli" target="_blank">Instagram</a> |
+      <a href="https://facebook.com/percirelli" target="_blank">Facebook</a> |
+      <a href="https://twitter.com/percirelli" target="_blank">Twitter</a>
+    </p>
+    <p>© 2025 Percirelli - Um sonho acordado</p>
   </footer>
 
-  <script>
-    function mostrarSecao(secaoId) {
-      const secoes = document.querySelectorAll('.secao');
-      secoes.forEach(secao => {
-        if (secao.id === secaoId) {
-          secao.classList.remove('hidden');
-        } else {
-          secao.classList.add('hidden');
-        }
-      });
-    }
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
